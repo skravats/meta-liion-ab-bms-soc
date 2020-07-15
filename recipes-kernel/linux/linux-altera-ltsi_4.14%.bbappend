@@ -2,7 +2,7 @@ PR = "r0"
 FILESEXTRAPATHS_prepend := "${THISDIR}/config:"
 
 SRC_URI_append_liion-ab-bms-soc += " \
-				file://socfpga_cyclone5_ab_bms_soc.dts \
+				file://socfpga_cyclone5_liion_ab_bms_soc \
 				file://socfpga-4.14-ltsi/cfg/altvipfb.cfg \
 				file://socfpga-4.14-ltsi/cfg/block.cfg \
 				file://socfpga-4.14-ltsi/cfg/cma.cfg \
@@ -14,5 +14,5 @@ SRC_URI_append_liion-ab-bms-soc += " \
 
 do_compile_prepend () {                                                            
 
-        cp ${TOPDIR}/../meta-liion-ad-bms-soc/recipes-kernel/linux/config/socfpga_cyclone5_ab_bms_soc.dts ${S}/arch/${ARCH}/boot/dts                          
+        cp ${TOPDIR}/../meta-liion-ad-bms-soc/recipes-kernel/linux/config/socfpga_cyclone5_liion_ab_bms_soc.dts ${S}/arch/${ARCH}/boot/dts                          
 }  
