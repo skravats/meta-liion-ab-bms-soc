@@ -2,7 +2,6 @@ inherit core-image
 
 IMAGE_INSTALL += " \
 	altera-gsrd-pio-interrupt \
-	liion-ab-bms-soc-linux-firmware \
 	liion-ab-bms-soc-usb-gadget \
 	bash \
 	ethtool \
