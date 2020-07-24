@@ -1,0 +1,5 @@
+the_selected_bms 1
+num_of_batts 2
+cell_groups_per_batt 3
+vstack_scale_factor 2
+

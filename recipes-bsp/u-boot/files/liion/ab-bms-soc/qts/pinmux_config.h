@@ -40,24 +40,24 @@ const u8 sys_mgr_init_table[] = {
 	3, /* FLASHIO10 */
 	3, /* FLASHIO11 */
 	0, /* GENERALIO0 */
-	1, /* GENERALIO1 */
-	1, /* GENERALIO2 */
-	1, /* GENERALIO3 */
-	1, /* GENERALIO4 */
+	0, /* GENERALIO1 */
+	0, /* GENERALIO2 */
+	0, /* GENERALIO3 */
+	0, /* GENERALIO4 */
 	0, /* GENERALIO5 */
 	0, /* GENERALIO6 */
 	0, /* GENERALIO7 */
 	0, /* GENERALIO8 */
-	3, /* GENERALIO9 */
-	3, /* GENERALIO10 */
-	3, /* GENERALIO11 */
-	3, /* GENERALIO12 */
-	0, /* GENERALIO13 */
-	0, /* GENERALIO14 */
-	1, /* GENERALIO15 */
-	1, /* GENERALIO16 */
-	1, /* GENERALIO17 */
-	1, /* GENERALIO18 */
+	0, /* GENERALIO9 */
+	0, /* GENERALIO10 */
+	0, /* GENERALIO11 */
+	0, /* GENERALIO12 */
+	3, /* GENERALIO13 */
+	3, /* GENERALIO14 */
+	0, /* GENERALIO15 */
+	0, /* GENERALIO16 */
+	0, /* GENERALIO17 */
+	0, /* GENERALIO18 */
 	0, /* GENERALIO19 */
 	0, /* GENERALIO20 */
 	0, /* GENERALIO21 */
@@ -86,12 +86,12 @@ const u8 sys_mgr_init_table[] = {
 	2, /* MIXED1IO12 */
 	2, /* MIXED1IO13 */
 	0, /* MIXED1IO14 */
-	3, /* MIXED1IO15 */
-	3, /* MIXED1IO16 */
-	3, /* MIXED1IO17 */
-	3, /* MIXED1IO18 */
-	3, /* MIXED1IO19 */
-	3, /* MIXED1IO20 */
+	0, /* MIXED1IO15 */
+	0, /* MIXED1IO16 */
+	0, /* MIXED1IO17 */
+	0, /* MIXED1IO18 */
+	0, /* MIXED1IO19 */
+	0, /* MIXED1IO20 */
 	0, /* MIXED1IO21 */
 	0, /* MIXED2IO0 */
 	0, /* MIXED2IO1 */
@@ -124,7 +124,7 @@ const u8 sys_mgr_init_table[] = {
 	0, /* GPLINMUX68 */
 	0, /* GPLINMUX69 */
 	0, /* GPLINMUX70 */
-	1, /* GPLMUX0 */
+	0, /* GPLMUX0 */
 	1, /* GPLMUX1 */
 	1, /* GPLMUX2 */
 	1, /* GPLMUX3 */
@@ -133,7 +133,7 @@ const u8 sys_mgr_init_table[] = {
 	1, /* GPLMUX6 */
 	1, /* GPLMUX7 */
 	1, /* GPLMUX8 */
-	1, /* GPLMUX9 */
+	0, /* GPLMUX9 */
 	1, /* GPLMUX10 */
 	1, /* GPLMUX11 */
 	1, /* GPLMUX12 */
@@ -177,20 +177,20 @@ const u8 sys_mgr_init_table[] = {
 	1, /* GPLMUX50 */
 	1, /* GPLMUX51 */
 	1, /* GPLMUX52 */
-	1, /* GPLMUX53 */
-	1, /* GPLMUX54 */
-	1, /* GPLMUX55 */
+	0, /* GPLMUX53 */
+	0, /* GPLMUX54 */
+	0, /* GPLMUX55 */
 	1, /* GPLMUX56 */
 	1, /* GPLMUX57 */
-	1, /* GPLMUX58 */
-	1, /* GPLMUX59 */
-	1, /* GPLMUX60 */
+	0, /* GPLMUX58 */
+	0, /* GPLMUX59 */
+	0, /* GPLMUX60 */
 	1, /* GPLMUX61 */
 	1, /* GPLMUX62 */
-	1, /* GPLMUX63 */
-	1, /* GPLMUX64 */
-	1, /* GPLMUX65 */
-	1, /* GPLMUX66 */
+	0, /* GPLMUX63 */
+	0, /* GPLMUX64 */
+	0, /* GPLMUX65 */
+	0, /* GPLMUX66 */
 	1, /* GPLMUX67 */
 	1, /* GPLMUX68 */
 	1, /* GPLMUX69 */

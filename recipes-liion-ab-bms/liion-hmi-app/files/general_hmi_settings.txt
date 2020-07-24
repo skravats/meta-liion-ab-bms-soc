@@ -1,0 +1,3 @@
+use_fahrenheit_units 0
+volts_temp_graph_update_rate 15
+

@@ -1,0 +1,8 @@
+[Unit]
+After=networking.service
+
+[Service]
+ExecStart=/home/liion/liion_hmi_autorun.sh
+
+[Install]
+WantedBy=default.target

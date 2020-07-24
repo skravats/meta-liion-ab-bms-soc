@@ -299,7 +299,7 @@ dtb-$(CONFIG_AM33XX) += \
 	am335x-base0033.dtb \
 	am335x-guardian.dtb \
 	am335x-wega-rdk.dtb
-dtb-$(CONFIG_AM43XX) += am437x-gp-evm.dtb am437x-sk-evm.dtb	\
+dtb-$(CONFIG_AM43XX) += am437x-gp-evm.dtb am437x-sk-evm.dtb \
 	am43x-epos-evm.dtb \
 	am437x-idk-evm.dtb \
 	am4372-generic.dtb \
@@ -308,30 +308,30 @@ dtb-$(CONFIG_TARGET_AM3517_EVM) += am3517-evm.dtb
 dtb-$(CONFIG_TI816X) += dm8168-evm.dtb
 dtb-$(CONFIG_THUNDERX) += thunderx-88xx.dtb
 
-dtb-$(CONFIG_ARCH_SOCFPGA) +=				\
-	socfpga_agilex_socdk.dtb			\
-	socfpga_agilex_socdk_nand.dtb                   \
-	socfpga_agilex_socdk_qspi.dtb			\
-	socfpga_arria5_socdk.dtb			\
-	socfpga_arria10_socdk_nand.dtb			\
-	socfpga_arria10_socdk_qspi.dtb			\
-	socfpga_arria10_socdk_sdmmc.dtb			\
-	socfpga_cyclone5_mcvevk.dtb			\
-	socfpga_cyclone5_is1.dtb			\
-	socfpga_cyclone5_liion_ab_bms_soc.dtb		\
-	socfpga_cyclone5_socdk.dtb			\
-	socfpga_cyclone5_dbm_soc1.dtb			\
-	socfpga_cyclone5_de0_nano_soc.dtb		\
-	socfpga_cyclone5_de1_soc.dtb			\
-	socfpga_cyclone5_de10_nano.dtb			\
-	socfpga_cyclone5_sockit.dtb			\
-	socfpga_cyclone5_socrates.dtb			\
-	socfpga_cyclone5_sr1500.dtb			\
-	socfpga_cyclone5_vining_fpga.dtb		\
-	socfpga_stratix10_socdk.dtb			\
+dtb-$(CONFIG_ARCH_SOCFPGA) += \
+	socfpga_agilex_socdk.dtb \
+	socfpga_agilex_socdk_nand.dtb \
+	socfpga_agilex_socdk_qspi.dtb \
+	socfpga_arria5_socdk.dtb \
+	socfpga_arria10_socdk_nand.dtb \
+	socfpga_arria10_socdk_qspi.dtb \
+	socfpga_arria10_socdk_sdmmc.dtb \
+	socfpga_cyclone5_mcvevk.dtb \
+	socfpga_cyclone5_is1.dtb \
+	socfpga_cyclone5_liion_ab_bms_soc.dtb 	\
+	socfpga_cyclone5_socdk.dtb \
+	socfpga_cyclone5_dbm_soc1.dtb	\
+	socfpga_cyclone5_de0_nano_soc.dtb \
+	socfpga_cyclone5_de1_soc.dtb \
+	socfpga_cyclone5_de10_nano.dtb  \
+	socfpga_cyclone5_sockit.dtb \
+	socfpga_cyclone5_socrates.dtb \
+	socfpga_cyclone5_sr1500.dtb \
+	socfpga_cyclone5_vining_fpga.dtb \
+	socfpga_stratix10_socdk.dtb \
 	socfpga_stratix10_socdk_qspi.dtb
 
-dtb-$(CONFIG_TARGET_DRA7XX_EVM) += dra72-evm.dtb dra7-evm.dtb	\
+dtb-$(CONFIG_TARGET_DRA7XX_EVM) += dra72-evm.dtb dra7-evm.dtb \
 	dra72-evm-revc.dtb dra71-evm.dtb dra76-evm.dtb
 dtb-$(CONFIG_TARGET_AM57XX_EVM) += am57xx-beagle-x15.dtb \
 	am57xx-beagle-x15-revb1.dtb \

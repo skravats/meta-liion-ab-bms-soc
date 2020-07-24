@@ -1,0 +1,3 @@
+	"fpgadata=0x2000000\0" \
+	"load_fpga=fatload mmc 0:1 $fpgadata soc_system.rbf\0" \
+	"callscript=run load_fpga; fpga load 0 $fpgadata $filesize; run distro_bootcmd\0" \

@@ -236,7 +236,7 @@ unsigned int cm_get_qspi_controller_clk_hz(void);
 #endif
 #endif
 
-/* Extra Environment sjk */
+/* Extra Environment */
 #ifndef CONFIG_SPL_BUILD
 
 #ifdef CONFIG_CMD_DHCP
@@ -283,10 +283,24 @@ unsigned int cm_get_qspi_controller_clk_hz(void);
 
 #ifndef CONFIG_EXTRA_ENV_SETTINGS
 #define CONFIG_EXTRA_ENV_SETTINGS \
-	"scriptfile=u-boot.scr" "\0" \
-	"fpgadata=0x2000000" "\0" \
-	"callscript=fatload mmc0:1 $fpgadata $scriptfile;" \
-	"source $fpgadata" "\0"
+	"fpgadata=0x2000000\0" \
+	"load_fpga=fatload mmc 0:1 $fpgadata soc_system.rbf\0" \
+	"callscripts=run load_fpga; fpga load 0 $fpgadata $filesize; bridge enable; run distro_bootcmd\0" \
+	"fdtfile=" CONFIG_DEFAULT_FDT_FILE "\0" \
+	"bootm_size=0xa000000\0" \
+	"kernel_addr_r="__stringify(CONFIG_SYS_LOAD_ADDR)"\0" \
+	"fdt_addr_r=0x02000000\0" \
+	"scriptaddr=0x02100000\0" \
+	"scriptfile=u-boot.scr\0" \
+	"fatscript=if fatload mmc 0:1 ${scriptaddr} ${scriptfile};" \
+			"then source ${scriptaddr}; fi\0" \
+	"pxefile_addr_r=0x02200000\0" \
+	"ramdisk_addr_r=0x02300000\0" \
+	"socfpga_legacy_reset_compat=1\0" \
+	"prog_core=if load mmc 0:1 ${loadaddr} fit_spl_fpga.itb;" \
+		   "then fpga loadmk 0 ${loadaddr}:fpga-core-1; fi\0" \
+	SOCFPGA_BOOT_SETTINGS \
+	BOOTENV
 
 #endif
 

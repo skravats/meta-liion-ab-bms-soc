@@ -6,8 +6,8 @@
 #include "socfpga_cyclone5.dtsi"
 
 / {
-	model = "Liion AB/BMS Board";
-	compatible = "liion,socfpga-cyclone5-liion-ab-bms-soc", "altr,socfpga-cyclone5", "altr,socfpga";
+	model = "abcd SoCkit";
+	compatible = "terasic,socfpga-cyclone5-sockit", "altr,socfpga-cyclone5", "altr,socfpga";
 
 	chosen {
 		bootargs = "earlyprintk";
