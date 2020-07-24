@@ -15,7 +15,7 @@ SRC_URI = "file://liion_hmi_autorun.service"
 
 do_install() {
 	install -d ${D}${base_libdir}/systemd/system
-	install -m -0644 ${WORKDIR}/*.service ${D}${base_libdir}/systemd/system
+	install -m -0644 ${WORKDIR}/liion_hmi_autorun.service.service ${D}${base_libdir}/systemd/system
 }
 
 ALLOW_EMPTY_${PN} = "1"
