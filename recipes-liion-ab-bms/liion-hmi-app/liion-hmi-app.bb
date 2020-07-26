@@ -25,20 +25,23 @@ SRC_URI = 			" \
 # avoid QA error by skipping QA test for ldflags
 INSANE_SKIP_${PN} = "ldflags"
 
+# avoid QA error due to #!/bin/bash in liion_hmi_autorun.sh
+RDEPENDS_${PN} += "bash"
+
 do_install () {
 	install -d ${D}/home/liion
-        install -m 0644 ${WORKDIR}/bms_config.txt ${D}/home/liion
-        install -m 0644 ${WORKDIR}/dkmem ${D}/home/liion
-        install -m 0644 ${WORKDIR}/general_hmi_settings.txt ${D}/home/liion
-        install -m 0644 ${WORKDIR}/golden_ts_cal.txt ${D}/home/liion
-        install -m 0644 ${WORKDIR}/liion_hmi ${D}/home/liion
-        install -m 0644 ${WORKDIR}/liion_hmi_autorun.sh ${D}/home/liion
-        install -m 0644 ${WORKDIR}/liion_hmi_hdmi ${D}/home/liion
-        install -m 0644 ${WORKDIR}/liion_hmi_lcd ${D}/home/liion
-        install -m 0644 ${WORKDIR}/modbus_tcp_ip_server ${D}/home/liion
-        install -m 0644 ${WORKDIR}/network_config.txt ${D}/home/liion
-        install -m 0644 ${WORKDIR}/ts_cal.txt ${D}/home/liion
-        install -m 0644 ${WORKDIR}/wifi_process_manager ${D}/home/liion
+        install -m 0777 ${WORKDIR}/bms_config.txt ${D}/home/liion
+        install -m 0777 ${WORKDIR}/dkmem ${D}/home/liion
+        install -m 0777 ${WORKDIR}/general_hmi_settings.txt ${D}/home/liion
+        install -m 0777 ${WORKDIR}/golden_ts_cal.txt ${D}/home/liion
+        install -m 0777 ${WORKDIR}/liion_hmi ${D}/home/liion
+        install -m 0777 ${WORKDIR}/liion_hmi_autorun.sh ${D}/home/liion
+        install -m 0777 ${WORKDIR}/liion_hmi_hdmi ${D}/home/liion
+        install -m 0777 ${WORKDIR}/liion_hmi_lcd ${D}/home/liion
+        install -m 0777 ${WORKDIR}/modbus_tcp_ip_server ${D}/home/liion
+        install -m 0777 ${WORKDIR}/network_config.txt ${D}/home/liion
+        install -m 0777 ${WORKDIR}/ts_cal.txt ${D}/home/liion
+        install -m 0777 ${WORKDIR}/wifi_process_manager ${D}/home/liion
 }
 
 FILES_${PN} += "/home/liion"

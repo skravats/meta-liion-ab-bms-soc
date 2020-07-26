@@ -11,11 +11,13 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 PV = "1.0${PR}"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
-SRC_URI = "file://liion_hmi_autorun.service"
+SRC_URI = 			" \
+				file://liion_hmi_autorun.service \
+		   	        "
 
 do_install() {
 	install -d ${D}${base_libdir}/systemd/system
-	install -m -0644 ${WORKDIR}/liion_hmi_autorun.service.service ${D}${base_libdir}/systemd/system
+	install -m -0777 ${WORKDIR}/liion_hmi_autorun.service ${D}${base_libdir}/systemd/system
 }
 
 ALLOW_EMPTY_${PN} = "1"
@@ -23,7 +25,8 @@ ALLOW_EMPTY_${PN} = "1"
 FILES_${PN}-network = "${base_libdir}/systemd/system/liion_hmi_autorun.service"
 
 
-NATIVE_SYSTEMD_SUPPORT = "1"
+NATIVE_SYSTEMD_SUPPORT = "1" 
 SYSTEMD_PACKAGES = "${PN}"
 SYSTEMD_SERVICE_${PN} = "liion_hmi_autorun.service"
 DISTRO_FEATURES = "systemd"
+

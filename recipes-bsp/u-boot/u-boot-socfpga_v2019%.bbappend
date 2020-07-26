@@ -22,6 +22,7 @@ SRC_URI_append_liion-ab-bms-soc += " \
 
 
 do_compile_prepend() {
+	cp ${TOPDIR}/../meta-liion-ab-bms-soc/recipes-bsp/u-boot/files/soc_system.rbf ${S}/../image/boot
         install -m 0644 ${TOPDIR}/../meta-liion-ab-bms-soc/recipes-bsp/u-boot/files/soc_system.rbf ${DEPLOYDIR}
         cp ${TOPDIR}/../meta-liion-ab-bms-soc/recipes-bsp/u-boot/files/socfpga_liion_ab_bms_soc_defconfig ${S}/configs
         cp ${TOPDIR}/../meta-liion-ab-bms-soc/recipes-bsp/u-boot/files/Kconfig ${S}/arch/arm/mach-socfpga/Kconfig
@@ -41,7 +42,5 @@ do_compile_prepend() {
         cp ${TOPDIR}/../meta-liion-ab-bms-soc/recipes-bsp/u-boot/files/liion/ab-bms-soc/qts/sdram_config.h ${S}/board/liion/ab-bms-soc/qts
 }
 
-#        install -m 0644 ${TOPDIR}/../meta-liion-ab-bms-soc/recipes-bsp/u-boot/files/soc_system.rbf ${DEPLOYDIR}/boot
-#        install -m 0644 ${TOPDIR}/../meta-liion-ab-bms-soc/recipes-bsp/u-boot/files/soc_system.rbf ${D}/boot
 
 
