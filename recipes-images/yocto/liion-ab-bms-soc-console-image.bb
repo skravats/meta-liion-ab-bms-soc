@@ -1,6 +1,9 @@
 inherit core-image
 
 IMAGE_INSTALL += " \
+	liion-hmi-app \
+	liion-hmi-app-init \
+	liion-rbf \
 	altera-gsrd-pio-interrupt \
 	liion-ab-bms-soc-usb-gadget \
 	bash \
