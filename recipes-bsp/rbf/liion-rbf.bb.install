@@ -15,11 +15,11 @@ SRC_URI = 			" \
 INSANE_SKIP_${PN} = "ldflags"
 
 do_install () {
-	install -d ${DEPLOY_DIR}/images/${MACHINE}/
+	install -d /image/boot
 	install -m 0777 ${WORKDIR}/soc_system.rbf ${DEPLOY_DIR}/images/${MACHINE}/
 }
 
-FILES_${PN} += "${DEPLOY_DIR}/images/${MACHINE}/"
+FILES_${PN} += "/images/${MACHINE}/"
 
 
 

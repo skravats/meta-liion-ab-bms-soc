@@ -11,16 +11,9 @@ SRC_URI = 			" \
 				file://soc_system.rbf \
           			"
 
-# avoid QA error by skipping QA test for ldflags
-INSANE_SKIP_${PN} = "ldflags"
 
-do_install () {
+do_compile_prepend () {
 	install -d ${DEPLOY_DIR}/images/${MACHINE}/
 	install -m 0777 ${WORKDIR}/soc_system.rbf ${DEPLOY_DIR}/images/${MACHINE}/
 }
-
-FILES_${PN} += "${DEPLOY_DIR}/images/${MACHINE}/"
-
-
-
 
